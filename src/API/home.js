@@ -6,9 +6,11 @@ import io from 'socket.io-client'
 // --------- sidelist ---------------
 
 const socket = io(`${cred.BACKEND_URL}`, {
+  withCredentials: true,
   query: {
     "userId": Cookies.get('userId')
-  }
+  },
+  transports: ['websocket', 'polling', 'flashsocket']
 })
 
 export async function callPage(setNotificationNum) {
