@@ -55,7 +55,7 @@ const Post = ({ postData, setPostData, reactionState, setReactionState }) => {
       return (
         <p
           id={postId}
-          className='material-symbols-rounded pt-1'
+          className='material-symbols-rounded pt-1 prevent-select'
           onClick={() => { removeReaction(postId, setShowReaction, setReactionState, reactionState, setCounterArrLen, counterArrLen) }}>
           {reactionIcon[searching?.reactionCheck]}
         </p>
@@ -64,16 +64,16 @@ const Post = ({ postData, setPostData, reactionState, setReactionState }) => {
       return (
         <div
           id={postId}
-          className='d-flex'
+          className='d-flex prevent-select'
           onClick={() => handleReactions(postId, reactionState, counterArrLen, setCounterArrLen, setReactionState)}>
           <span
             id={postId}
-            class="material-symbols-rounded my-auto">
+            class="material-symbols-rounded my-auto prevent-select">
             thumb_up
           </span>
           <p
             id={postId}
-            className='ms-2 my-auto d-none d-sm-block'>
+            className='ms-2 my-auto d-none d-sm-block prevent-select'>
             Like
           </p>
         </div>

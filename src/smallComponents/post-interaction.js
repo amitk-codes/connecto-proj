@@ -27,12 +27,12 @@ export function InteractionBtns(props) {
 
 
   const reactionType = [
-    { label: "like", node: <div>👍</div>, key: "like" },
-    { label: "love", node: <div>💖</div>, key: "love" },
-    { label: "haha", node: <div>😂</div>, key: "haha" },
-    { label: "wow", node: <div>😲</div>, key: "wow" },
-    { label: "sad", node: <div>😥</div>, key: "sad" },
-    { label: "angry", node: <div>😡</div>, key: "angry" }
+    { label: "like", node: <div className="prevent-select">👍</div>, key: "like" },
+    { label: "love", node: <div className="prevent-select">💖</div>, key: "love" },
+    { label: "haha", node: <div className="prevent-select">😂</div>, key: "haha" },
+    { label: "wow", node: <div className="prevent-select">😲</div>, key: "wow" },
+    { label: "sad", node: <div className="prevent-select">😥</div>, key: "sad" },
+    { label: "angry", node: <div className="prevent-select">😡</div>, key: "angry" }
   ]
   function handleShow(postId) {
     setShowReaction(postId)
@@ -90,10 +90,10 @@ export function InteractionBtns(props) {
         </div>
 
         <div className='icon-post-like-comment d-flex' onClick={() => commentClick(post)}>
-          <span className="material-symbols-rounded my-auto">
+          <span className="material-symbols-rounded my-auto prevent-select">
             comment
           </span>
-          <p className='ms-2 my-auto d-none d-sm-block'>comment</p>
+          <p className='ms-2 my-auto d-none d-sm-block prevent-select'>comment</p>
         </div>
       </div>
     </>

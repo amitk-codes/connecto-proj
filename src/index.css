@@ -766,3 +766,10 @@ body{
   background-color: #e8ecef !important;
   /* color: #3d3f42 !important; */
 }
+
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
