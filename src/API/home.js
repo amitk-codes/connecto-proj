@@ -10,7 +10,7 @@ const socket = io(`${cred.BACKEND_URL}`, {
   query: {
     "userId": Cookies.get('userId')
   },
-  // transports: ['websocket', 'polling', 'flashsocket']
+  transports: ['websocket', 'polling', 'flashsocket']
 })
 
 export async function callPage(setNotificationNum) {
