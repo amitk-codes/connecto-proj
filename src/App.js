@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       <LoadingBar
-        color='#8057d7'
+        color='#f11946'
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
