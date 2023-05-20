@@ -1,17 +1,17 @@
 import axios from "axios"
 import Cookies from "js-cookie"
 import cred from "../env"
-import io from 'socket.io-client'
+// import io from 'socket.io-client'
 
 // --------- sidelist ---------------
 
-const socket = io(`${cred.BACKEND_URL}`, {
-  withCredentials: true,
-  query: {
-    "userId": Cookies.get('userId')
-  },
-  transports: ['websocket', 'polling', 'flashsocket']
-})
+// const socket = io(`${cred.BACKEND_URL}`, {
+//   withCredentials: true,
+//   query: {
+//     "userId": Cookies.get('userId')
+//   },
+//   transports: ['websocket', 'polling', 'flashsocket']
+// })
 
 export async function callPage(setNotificationNum) {
   try {
@@ -31,13 +31,13 @@ export async function callPage(setNotificationNum) {
   }
 }
 
-export function checkNotifications(setNotificationNum) {
-  // console.log('react socket calleddddd')
-  socket.on('sendrequest', (data) => {
-    // console.log(data)
-    setNotificationNum((num) => num + 1)
-  })
-}
+// export function checkNotifications(setNotificationNum) {
+//   // console.log('react socket calleddddd')
+//   socket.on('sendrequest', (data) => {
+//     // console.log(data)
+//     setNotificationNum((num) => num + 1)
+//   })
+// }
 
 // --------- Posts --------------
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { callPage, checkNotifications } from "../API/home";
+import { callPage } from "../API/home";
 
 const SideList = () => {
   const navigate = useNavigate()
@@ -10,7 +10,7 @@ const SideList = () => {
   useEffect(() => {
     // console.log('useffect double call checkkkingggg')
     callPage(setNotificationNum)
-    checkNotifications(setNotificationNum)
+    // checkNotifications(setNotificationNum)
   }, [])
 
   return (
